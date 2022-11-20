@@ -3,6 +3,6 @@ describe('The Home Page', () => {
     cy.visit('/');
     cy.findByRole('heading', { name: /hello world/i }).should('exist');
     cy.findByRole('article').should('exist');
-    cy.findByAltText('myImage').should('exist');
+    cy.findByAltText('myLogo').should('exist');
   });
 });
