@@ -1,15 +1,18 @@
 // adds special assertions like toHaveTextContent
-import "@testing-library/jest-dom/extend-expect";
+import '@testing-library/jest-dom/extend-expect';
 
-import { getByText } from "@testing-library/dom";
+/**
+ * @jest-environment jsdom
+ */
+import { getByText } from '@testing-library/dom';
 
-import { printUsers } from "../src/index";
+import { printUsers } from '../src/index';
 
-test("examples of some things", async () => {
+test('examples of some things', async () => {
   const container = await printUsers();
   document.body.appendChild(container);
 
-  const user = getByText(container, "Current users");
+  const user = getByText(container, 'Current users');
 
   expect(user).toBeInTheDocument();
 });

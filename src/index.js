@@ -1,12 +1,12 @@
-import "./assets/css/normalize.css";
+import '../public/assets/css/normalize.css';
 
-import { getUsers } from "./users";
+import { getUsers } from './users';
 
 export async function printUsers() {
   const users = await getUsers();
-  const element = document.createElement("div");
+  const element = document.createElement('div');
   element.innerHTML = `<h2>Current users</h2>
-    ${users.map((user) => `<div>${user.name}</div>`).join("")}`;
+    ${users.map((user) => `<div>${user.name}</div>`).join('')}`;
   return element;
 }
 

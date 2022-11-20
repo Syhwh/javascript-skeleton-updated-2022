@@ -1,5 +1,10 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": true
+  },
   "env": {
     "browser": true,
     "node": true
@@ -11,10 +16,18 @@
   ],
   "extends": [
     "eslint:recommended",
+    "plugin:node/recommended",
     "plugin:prettier/recommended"
   ],
   "rules": {
-    "no-console": ["error", { "allow": ["error"] }],
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "error"
+        ]
+      }
+    ],
     "no-var": "error",
     "object-shorthand": "error",
     "prefer-const": "error",
@@ -27,6 +40,37 @@
     "simple-import-sort/exports": "error",
     "import/first": "error",
     "import/newline-after-import": "error",
-    "import/no-duplicates": "error"
+    "import/no-duplicates": "error",
+    "node/global-require": "warn",
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": false
+      }
+    ],
+    "semi": "error",
+    "semi-style": [
+      "error",
+      "last"
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "parser": "flow",
+        "semi": true
+      }
+    ],
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      {
+        "ignores": [
+          "modules"
+        ]
+      },
+    ],
+    "node/no-unpublished-require": "off"
   }
 }
