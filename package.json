@@ -12,8 +12,8 @@
     "cy:run": "cypress run  --headless",
     "cy:open": "cypress open",
     "test": "jest",
-    "test:e2e": "concurrently \"npm:dev\" \"npm:cy:run\"",
-    "test:e2eRun": "concurrently \"npm:dev\" \"npm:cy:open\""
+    "test:run": "concurrently \"npm:dev\" \"npm:cy:run\"",
+    "test:open": "concurrently \"npm:dev\" \"npm:cy:open\""
   },
   "keywords": [],
   "author": "",
