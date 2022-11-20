@@ -1,9 +1,7 @@
+/* eslint-disable node/no-unpublished-import */
 // adds special assertions like toHaveTextContent
 import '@testing-library/jest-dom/extend-expect';
 
-/**
- * @jest-environment jsdom
- */
 import { getByText } from '@testing-library/dom';
 
 import { printUsers } from '../src/index';

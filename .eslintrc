@@ -69,8 +69,15 @@
         "ignores": [
           "modules"
         ]
-      },
+      }
     ],
-    "node/no-unpublished-require": "off"
+    "node/no-unpublished-require": [
+      "off",
+      {
+        "allowModules": [
+          "cypress"
+        ]
+      }
+    ]
   }
 }
