@@ -8,7 +8,7 @@ module.exports = merge(common, {
   target: 'web',
   devServer: {
     static: './public',
-    port: 3030,
+    port: 8080,
     hot: true,
   },
 });

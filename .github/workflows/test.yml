@@ -31,6 +31,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -51,5 +55,6 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           build: npm run build
-          start: npm run start
-          wait-on: "http://localhost:3030"
+          start: npm run start & wait-on http://localhost:8080
+          wait-on: "http://localhost:8080"
+          config: "baseUrl=http://localhost:8080"
